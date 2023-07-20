@@ -1650,9 +1650,6 @@ MonoBehaviour:
   _maxSpeed: 5
   _rigidBody: {fileID: 6137346810065089503}
   _animator: {fileID: 6137346810065089504}
-  coyoteTimeCounter: 0
-  jumpBufferCounter: 0
-  jumpFramesTimer: 0
 --- !u!114 &919132149084493899
 MonoBehaviour:
   m_ObjectHideFlags: 0
