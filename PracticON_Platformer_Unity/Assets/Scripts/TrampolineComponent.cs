@@ -12,6 +12,6 @@ public class TrampolineComponent : MonoBehaviour
     {
         go = other.gameObject;
         rb = go.GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(0, yForce, 0),ForceMode.Force);
+        rb.AddForce(new Vector3(0, yForce, 0),ForceMode.Impulse);
     }
 }
