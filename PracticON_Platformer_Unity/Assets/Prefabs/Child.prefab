@@ -1477,10 +1477,10 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 584d951d44fe74098aa873188aa3adbc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.28961945
-  m_Height: 2.1875317
+  m_Radius: 0.4
+  m_Height: 2.5
   m_Direction: 1
-  m_Center: {x: 0.000000016341072, y: 0.056238703, z: -0.18086307}
+  m_Center: {x: 0, y: 0.63, z: 0}
 --- !u!1 &6176637957886192722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1574,7 @@ Transform:
   m_GameObject: {fileID: 6479929694835209930}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -3.6894863, y: 0.07, z: 0.3357531}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4725717557780990079}
@@ -1644,9 +1644,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f7f3edf61104ec587d686ea9b33a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 2
+  _moveSpeed: 1.5
   _jumpForce: 8
-  _friction: 0.8
+  _friction: 0.6
   _maxSpeed: 5
   _rigidBody: {fileID: 6137346810065089503}
   _animator: {fileID: 6137346810065089504}
