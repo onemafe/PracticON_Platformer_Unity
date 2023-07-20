@@ -14,12 +14,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private float coyoteTime = 0.2f; //Чем выше это значение, тем дольше игрок может прыгать после отрыва от земли
-    [SerializeField] private float coyoteTimeCounter; //Счётчик времени кайота
+    private float coyoteTimeCounter; //Счётчик времени кайота
 
     private float jumpBufferTime = 0.2f; //Сколько действует буффер
-    [SerializeField] private float jumpBufferCounter; //Счётчик времени буффера
+    private float jumpBufferCounter; //Счётчик времени буффера
 
-    [SerializeField] private float jumpFramesTimer;
+    private float jumpFramesTimer;
 
     private float _xAxis;
     private float _xEuler;

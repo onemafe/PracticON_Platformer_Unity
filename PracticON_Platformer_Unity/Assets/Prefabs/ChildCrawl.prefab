@@ -1557,8 +1557,9 @@ GameObject:
   - component: {fileID: 6137346810065089501}
   - component: {fileID: 6137346810065089504}
   - component: {fileID: 6137346810065089502}
+  - component: {fileID: 919132149084493899}
   m_Layer: 0
-  m_Name: Child
+  m_Name: ChildCrawl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1643,7 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f7f3edf61104ec587d686ea9b33a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
+  _moveSpeed: 0.8
   _jumpForce: 0
   _friction: 0.8
   _maxSpeed: 5
@@ -1652,6 +1653,18 @@ MonoBehaviour:
   coyoteTimeCounter: 0
   jumpBufferCounter: 0
   jumpFramesTimer: 0
+--- !u!114 &919132149084493899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479929694835209930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26580724a568c4f44b010b58328e6266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6754580803717412663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,7 +1787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7023341060222673275}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.19, y: 2.57, z: -10.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []

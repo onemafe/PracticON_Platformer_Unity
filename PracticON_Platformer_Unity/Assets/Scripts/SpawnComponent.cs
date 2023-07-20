@@ -6,6 +6,7 @@ public class SpawnComponent : MonoBehaviour
 {
     [SerializeField] private Transform _target;
     [SerializeField] private GameObject _prefab;
+    public GameObject Prefab => _prefab;
 
     [ContextMenu("Spawn")]
     public void Spawn()
