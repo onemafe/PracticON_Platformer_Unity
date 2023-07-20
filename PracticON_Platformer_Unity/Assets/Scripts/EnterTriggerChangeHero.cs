@@ -8,21 +8,21 @@ using UnityEngine.Events;
 public class EnterTriggerChangeHero : MonoBehaviour
 {
 
-    private GameObject go;
-    [SerializeField] private SpawnComponent _spawn;
+    [SerializeField] private GameObject _goEnable;
+    private GameObject _goDisable;
     [SerializeField] private CinemachineVirtualCamera _vcam;
-    [SerializeField] GameObject _prefabTarget;
+
 
 
     //Collider нужно держать в комплекте с префабом
     private void OnTriggerEnter(Collider other)
     {
-        go = other.gameObject.transform.parent.gameObject;
-        Destroy(go);
-        _spawn.Spawn();
+        _goDisable = other.gameObject.transform.parent.gameObject;
+        _goDisable.SetActive(false);
+        _goEnable.SetActive(true);
 
-        /*_vcam.Follow = _prefabTarget.transform;
-        _vcam.LookAt = _prefabTarget.transform;*/
+        _vcam.Follow = _goEnable.transform;
+        _vcam.LookAt = _goEnable.transform;
 
     }
 
