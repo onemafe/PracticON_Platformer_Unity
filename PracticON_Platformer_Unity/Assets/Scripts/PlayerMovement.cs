@@ -133,8 +133,8 @@ public class PlayerMovement : MonoBehaviour
             _rigidBody.AddForce(input * _moveSpeed * speedMultiplierInAir, 0, 0, ForceMode.VelocityChange);
         }
 
-        //трение по оси x добавляем, чтобы не ускоряться бесконечно. В воздухе оно становится в 0.2 раза меньше
-        _rigidBody.AddForce(-_rigidBody.velocity.x * _friction * speedMultiplierInAir, 0, 0, ForceMode.VelocityChange);
+        //трение по оси x добавляем, чтобы не ускоряться бесконечно. В воздухе оно становится в 0.2 раза меньше, по z ускорение для Girl
+        _rigidBody.AddForce(-_rigidBody.velocity.x * _friction * speedMultiplierInAir, 0, -_rigidBody.velocity.z * _friction/2, ForceMode.VelocityChange);
     }
 
 
