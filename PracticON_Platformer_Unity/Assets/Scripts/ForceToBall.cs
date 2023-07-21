@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class ForceToBall : MonoBehaviour
 {
-    [SerializeField] private Vector3 _direction;
-    [SerializeField] private float _force;
-
+    public Vector3 _direction;
     private Rigidbody _rb;
     
     
