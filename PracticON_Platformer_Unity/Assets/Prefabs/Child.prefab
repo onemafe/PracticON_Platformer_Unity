@@ -1648,6 +1648,7 @@ MonoBehaviour:
   _jumpForce: 8
   _friction: 0.6
   _maxSpeed: 5
+  _rotationSpeed: 0
   _rigidBody: {fileID: 6137346810065089503}
   _animator: {fileID: 6137346810065089504}
 --- !u!114 &919132149084493899

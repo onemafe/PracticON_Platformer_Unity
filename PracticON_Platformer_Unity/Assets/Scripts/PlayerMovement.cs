@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _friction = 0.6f;
     [SerializeField] private float _maxSpeed = 5;
 
+    [SerializeField] private float _rotationSpeed;
+
     [SerializeField] private Rigidbody _rigidBody;
     [SerializeField] private Animator _animator;
 
@@ -22,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpFramesTimer;
 
     private float _xAxis;
-    private float _xEuler;
+    private float _xEuler = 90;
     private bool _isGrounded = false;
 
 
@@ -92,12 +94,13 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = 0f;
         }
 
-
+        //Поворот
+        
         if (_xAxis > 0)
             _xEuler = 90f;
         if (_xAxis < 0)
-            _xEuler = 270f;
-        transform.localRotation = Quaternion.Euler(0, _xEuler, 0);
+            _xEuler = -90f;
+        transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, _xEuler, 0), Time.deltaTime * _rotationSpeed);
 
 
         _animator.SetBool("isRunning", Input.GetAxis("Horizontal") != 0);

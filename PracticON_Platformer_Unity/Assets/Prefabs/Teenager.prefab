@@ -1885,7 +1885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3875080486137459805
 Transform:
   m_ObjectHideFlags: 0
@@ -1984,6 +1984,7 @@ MonoBehaviour:
   _jumpForce: 8
   _friction: 0.6
   _maxSpeed: 5
+  _rotationSpeed: 0
   _rigidBody: {fileID: 7699259406649625394}
   _animator: {fileID: 7699259406649625392}
 --- !u!1 &4554861114594017472
