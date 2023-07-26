@@ -5,13 +5,15 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class HealthComponent : MonoBehaviour
-{
-    [SerializeField] public int _health;
+{   
+    private int _health;
+    private int _maxHealth;
+
     [SerializeField] private UnityEvent _onDamage;
     [SerializeField] public UnityEvent _onDie;
     [SerializeField] private UnityEvent _onHeal;
 
-
+    [SerializeField] private HealthUI _healthUI;
 
     [ContextMenu("Kill")]
     public void Kill()
@@ -36,14 +38,20 @@ public class HealthComponent : MonoBehaviour
         if (_health <= 0)
             _onDie?.Invoke();
 
+
         print("HP:" + _health);
     }
 
 
 
-    public void SetHealth(int health) //В классе Hero обращаемся к этому методу чтобы установить жизни. Там они берутся из Gamesession.
+    public void SetHealth(int health) 
     {
         _health = health;
+    }
+
+    public void SetMaxHealth(int maxHealth) 
+    {
+        _maxHealth = maxHealth;
     }
 
 

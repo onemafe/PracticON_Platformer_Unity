@@ -29,10 +29,6 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
-
-
-
     //Проверка isGrounded
     private void OnCollisionStay(Collision collision)
     {
