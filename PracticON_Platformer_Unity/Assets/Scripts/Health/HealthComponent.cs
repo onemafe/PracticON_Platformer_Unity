@@ -6,14 +6,26 @@ using UnityEngine.Events;
 
 public class HealthComponent : MonoBehaviour
 {   
-    private int _health;
-    private int _maxHealth;
+    [SerializeField] private int _health;
+    [SerializeField] private int _maxHealth;
 
     [SerializeField] private UnityEvent _onDamage;
     [SerializeField] public UnityEvent _onDie;
     [SerializeField] private UnityEvent _onHeal;
 
-    [SerializeField] private HealthUI _healthUI;
+    private GameSession gameSession;
+    private HealthUI healthUI;
+
+
+    private void Start()
+    {
+        if (gameObject.CompareTag("Player"))
+        {
+            gameSession = GameObject.Find("GameSession").GetComponent<GameSession>();
+            healthUI = GameObject.Find("HealthUI").GetComponent<HealthUI>();
+        }
+
+    }
 
     [ContextMenu("Kill")]
     public void Kill()
@@ -28,6 +40,7 @@ public class HealthComponent : MonoBehaviour
         if (_health <= 0) return;
 
         _health += _changeHPValue;
+        _health = Mathf.Min(_health, _maxHealth); // проверка чтобы жизни не были больше максимального
 
         if (_changeHPValue < 0)
             _onDamage?.Invoke();
@@ -38,12 +51,17 @@ public class HealthComponent : MonoBehaviour
         if (_health <= 0)
             _onDie?.Invoke();
 
+        gameSession.Health = _health;
+        healthUI.DisplayHealth(_health);
 
         print("HP:" + _health);
     }
 
 
 
+
+
+    //Методы вызываемые из Player, и жизни игрока из Player придут, а не отсюда
     public void SetHealth(int health) 
     {
         _health = health;
@@ -55,7 +73,6 @@ public class HealthComponent : MonoBehaviour
     }
 
 
-    //что это?
     private void OnDestroy()
     {
         _onDie.RemoveAllListeners();

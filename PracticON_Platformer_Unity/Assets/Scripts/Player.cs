@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private HealthUI _healthUI;
     [SerializeField] private GameSession gameSession;
+
     void Start()
     {
         var health = GetComponent<HealthComponent>();
@@ -16,8 +17,4 @@ public class Player : MonoBehaviour
         _healthUI.Setup(gameSession.MaxHealth);
         _healthUI.DisplayHealth(gameSession.Health);
     }
-
-
-
-
 }
