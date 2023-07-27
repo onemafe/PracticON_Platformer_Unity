@@ -17,7 +17,7 @@ public class EnterTriggerChangeHero : MonoBehaviour
     //Collider нужно держать в комплекте с префабом
     private void OnTriggerEnter(Collider other)
     {
-        _goDisable = other.gameObject.transform.parent.gameObject;
+        _goDisable = other.gameObject;
         _goDisable.SetActive(false);
         _goEnable.SetActive(true);
 
