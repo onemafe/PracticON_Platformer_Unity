@@ -27,7 +27,16 @@ public class PlayerMovement : MonoBehaviour
     private float _xEuler = 90;
     private bool _isGrounded = false;
 
+    public static PlayerMovement Instance { get; private set; }
 
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     //Проверка isGrounded
     private void OnCollisionStay(Collision collision)
