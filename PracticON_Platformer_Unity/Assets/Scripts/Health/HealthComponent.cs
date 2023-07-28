@@ -51,8 +51,13 @@ public class HealthComponent : MonoBehaviour
         if (_health <= 0)
             _onDie?.Invoke();
 
-        gameSession.Health = _health;
-        healthUI.DisplayHealth(_health);
+
+        if (gameObject.CompareTag("Player"))
+        {
+            gameSession.Health = _health;
+            healthUI.DisplayHealth(_health);
+        }
+
 
         print("HP:" + _health);
     }

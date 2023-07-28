@@ -15,7 +15,7 @@ public class EnterTriggerFixZ : MonoBehaviour
     //Collider нужно держать в комплекте с префабом
     private void OnTriggerEnter(Collider other)
     {
-        rb = other.transform.parent.GetComponent<Rigidbody>();
+        rb = other.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
     }
 

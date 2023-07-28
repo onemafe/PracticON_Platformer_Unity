@@ -1,51 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &477377376
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 477377377}
-  - component: {fileID: 477377378}
-  m_Layer: 3
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &477377377
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477377376}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.33599994, y: 0.47599998, z: 0.7662501}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6486359823476223246}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &477377378
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477377376}
-  m_Material: {fileID: 13400000, guid: 584d951d44fe74098aa873188aa3adbc, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.42994463
-  m_Height: 3.6933672
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.07, z: 0}
 --- !u!1 &570139666995120297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1311,7 @@ GameObject:
   - component: {fileID: 2997718231564864578}
   - component: {fileID: 2997718231564864576}
   - component: {fileID: 2997718231564864577}
+  - component: {fileID: 5799969787469399717}
   m_Layer: 3
   m_Name: TeenagerGirl
   m_TagString: Player
@@ -1378,7 +1333,6 @@ Transform:
   m_Children:
   - {fileID: 3703592446177062783}
   - {fileID: 1609050776928521626}
-  - {fileID: 477377377}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1462,6 +1416,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26580724a568c4f44b010b58328e6266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &5799969787469399717
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5859180126735579060}
+  m_Material: {fileID: 13400000, guid: 584d951d44fe74098aa873188aa3adbc, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.42994463
+  m_Height: 3.6933672
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.07, z: 0}
 --- !u!1 &5948010483905451247
 GameObject:
   m_ObjectHideFlags: 0
